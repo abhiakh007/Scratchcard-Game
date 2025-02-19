@@ -68,8 +68,7 @@ function App() {
   };
 
   const _onPressPlayButton = async () => {
-    if (gameBoxStatus === 0) {
-      setGameboxStatus(1);
+    if (gameBoxStatus === 1) {
     } else {
       const response = await axios.get(`time/${walletAddress}`);
       setLastTime(response.data.result);
